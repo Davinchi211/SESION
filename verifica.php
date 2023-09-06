@@ -6,9 +6,11 @@
     $_SESSION["usuario"]=getUsuario();
     $_SESSION["password"]=getClave();
 
+    //Asignando variables
     $us = $_SESSION["usuario"];
     $pas = $_SESSION["password"];
 
+    //enviando el valor de las variables y null si no existe
     function getUsuario(){
         return $_POST["txtUser"] ?? null;
     }

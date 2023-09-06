@@ -24,3 +24,12 @@ footer{
     width: 100%;
     bottom: 0;
 }
+
+/*
+<input type="submit" class="btn btn-danger" name="btnSalir" value="SALIR">
+                    <?php
+                        if(isset($_POST['btnSalir'])){
+                            session_destroy();
+                        }
+                    ?>
+*/

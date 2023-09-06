@@ -46,12 +46,6 @@
                     <td heigth="50" colspan="3" align="center">
                         <br>
                         <input type="submit" class="btn btn-secondary" name="btnAcceso" value="INGRESAR">
-                        <input type="submit" class="btn btn-danger" name="btnSalir" value="SALIR">
-                    <?php
-                        if(isset($_POST['btnSalir'])){
-                            session_destroy();
-                        }
-                    ?>
                     </td>
                 </tr>
             </table>
@@ -77,7 +71,7 @@
     <div class="container2 w-25 mx-auto">
         <?php 
         if($us=="david" && $pas=="12345"){
-            echo "<a href='style.css' class='link-secondary'>IR a la pagina</a>";
+            echo "<a href='CRUD/inicio.php' class='link-secondary'>IR a la pagina</a>";
         }else{
            echo "<div class='d-flex align-items-center'>";
             echo "<strong role='status'>Loading...</strong>";
@@ -87,7 +81,7 @@
         ?>
     </div>    <br>
     <footer class="bg-light text-center text-lg-start">  
-        <div class="text-between p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
         <h4>VISITANTE Nº
     <label><?php include'contador.php';?></label></h4>
   </div>
