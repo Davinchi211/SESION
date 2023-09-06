@@ -10,9 +10,9 @@
     $pas = $_SESSION["password"];
 
     function getUsuario(){
-        return $_POST["txtUser"];
+        return $_POST["txtUser"] ?? null;
     }
     function getClave(){
-        return $_POST["txtPassword"];
+        return $_POST["txtPassword"] ?? null;
     }    
 ?>

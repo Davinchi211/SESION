@@ -15,7 +15,7 @@
         <form action="" name="form1" method="post" id="form1">
             <table align="center">
                 <tr>
-                    <td rowspan="3" width="120"><img src="user.png" align="top" alt="usuario" width="50" height="50"></td>
+                    <td rowspan="3" width="120"><img src="user.png" align="top" alt="usuario" width="75" height="75"></td>
                 </tr>
                 <tr>
                     <td width="110">
@@ -27,6 +27,7 @@
                             <input type="text" class="form-control" id="inputUser" placeholder="Usuario" name="txtUser">
                         </div>
                     </div>
+                    <hr>
                     </td>
                 </tr>
                 <tr>
@@ -46,6 +47,11 @@
                         <br>
                         <input type="submit" class="btn btn-secondary" name="btnAcceso" value="INGRESAR">
                         <input type="submit" class="btn btn-danger" name="btnSalir" value="SALIR">
+                    <?php
+                        if(isset($_POST['btnSalir'])){
+                            session_destroy();
+                        }
+                    ?>
                     </td>
                 </tr>
             </table>
@@ -71,7 +77,7 @@
     <div class="container2 w-25 mx-auto">
         <?php 
         if($us=="david" && $pas=="12345"){
-            echo "<a href='style.css'>IR a la pagina</a>";
+            echo "<a href='style.css' class='link-secondary'>IR a la pagina</a>";
         }else{
            echo "<div class='d-flex align-items-center'>";
             echo "<strong role='status'>Loading...</strong>";
@@ -79,6 +85,12 @@
             echo"</div>";
         }
         ?>
-    </div>
+    </div>    <br>
+    <footer class="bg-light text-center text-lg-start">  
+        <div class="text-between p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <h4>VISITANTE Nº
+    <label><?php include'contador.php';?></label></h4>
+  </div>
+</footer>
 </body>
 </html>
