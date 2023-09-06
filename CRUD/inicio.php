@@ -4,7 +4,7 @@ include('conecta.php');
 $con = connection();
 $sql = "Select * FROM db_users";
 $query = mysqli_query($con,$sql);
-$n = mysql_num_rows($query);
+$num_rows = mysqli_num_rows($query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,9 +15,17 @@ $n = mysql_num_rows($query);
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+    <script type="text/javascript">
+        function Confirm_insert(){
+            alert('USUARIO AGREGADO EXITOSAMENTE !!');
+            return true;
+        }
+        </script>
     <div>
         <form action="insert_user.php" method="POST">
             <h1>Crear Usuario</h1>
+            <label for="">ID</label>
+            <input type="text" name="id" disabled>
             <label for="">Nombre</label>
             <input type="text" name="firstname" placeholder="Nombre">
             <label for="">Apellido</label>
@@ -26,7 +34,7 @@ $n = mysql_num_rows($query);
             <input type="text" name="user" placeholder="Usuario">
             <label for="">Cotraseña</label>
             <input type="password" name="pass" placeholder="Contraseña">
-            <input type="submit" value="Agregar">
+            <input type="submit" value="Agregar Usuario" onclick="Confirm_insert()">
         </form>
     </div>
     <br>
@@ -56,7 +64,7 @@ $n = mysql_num_rows($query);
                     </tr>
                     <?php endwhile;?>
                     <tr>
-                        <td><?php echo $n; ?></td>
+                        <td colspan="5"><br><?php echo "TOTAL USUARIOS REGISTRADOS: ".$num_rows.""; ?></td>
                     </tr>
             </tbody>
         </table>
