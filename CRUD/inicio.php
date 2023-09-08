@@ -59,8 +59,8 @@ $num_rows = mysqli_num_rows($query);
                         <td><?=$row['firstname']?></td>
                         <td><?=$row['lastname']?></td>
                         <td><?=$row['user']?></td>
-                        <td><a href="update_user.php?id<?= $row['id']?>">MODIFICAR</a></td>
-                        <td><a href="delete_user.php?id<?= $row['id']?>">ELIMINAR</a></td>
+                        <td><a href="update_user.php?id=<?= $row['id']?>">MODIFICAR</a></td>
+                        <td><a href="delete_user.php?id=<?= $row['id']?>">ELIMINAR</a></td>
                     </tr>
                     <?php endwhile;?>
                     <tr>

@@ -12,6 +12,6 @@ $sql = "UPDATE db_users SET firstname='$name', lastname='$lname', user='$user',p
 $query = mysqli_query($con, $sql);
 
 if($query){
-    Header("Location: inicio.php")
+    Header("Location: inicio.php");
 }
 ?>

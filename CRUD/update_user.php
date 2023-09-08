@@ -29,7 +29,7 @@
             <label for="">Apellido</label>
             <input type="text" name="lastname" placeholder="Apellido" value="<?= $row['lastname'] ?>">
             <label for="">Usuario</label>
-            <input type="text" name="user" placeholder="Usuario" value="<?= $row['username'] ?>">
+            <input type="text" name="user" placeholder="Usuario" value="<?= $row['user'] ?>">
             <label for="">Cotraseña</label>
             <input type="password" name="pass" placeholder="Contraseña" value="<?= $row['password'] ?>">
             <input type="submit" value="Actualizar">
